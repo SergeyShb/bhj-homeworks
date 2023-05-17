@@ -15,6 +15,7 @@ let modalSuccess = document.getElementById("modal_success");
 
 for(let i = 0; i < showSuccess.length; i++) {
     showSuccess[i].onclick = function() {
+        popup.classList.remove("modal_active");
         modalSuccess.classList.add("modal_active");
     }
 };
