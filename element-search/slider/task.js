@@ -2,7 +2,8 @@ let sliderArrowPrev = document.querySelector(".slider__arrow_prev");
 let sliderArrowNext = document.querySelector(".slider__arrow_next");
 let allSliderItem = Array.from(document.querySelectorAll(".slider__item"));
 
-let slidIndex = 0;
+let slidIndex = allSliderItem.findIndex(item => item.classList.contains("slider__item_active"));
+
 
 
 sliderArrowNext.onclick = function() {
