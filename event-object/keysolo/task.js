@@ -17,6 +17,29 @@ class Game {
   }
 
   registerEvents() {
+
+    //window.addEventListener("keydown", symbolPressedButton);
+
+
+    // function symbolPressedButton(event) {
+    //   if (event.key === this.currentSymbol.textContent) {
+    //     this.success()
+    //   } else {
+    //     this.fail()
+    //   }
+    // };
+
+
+    window.addEventListener("keydown", (event) => {
+        if (event.key === this.currentSymbol.textContent) {
+          this.success()
+        } else {
+          this.fail()
+        }
+      }
+    );
+
+
     /*
       TODO:
       Написать обработчик события, который откликается
