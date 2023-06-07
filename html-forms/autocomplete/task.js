@@ -7,7 +7,7 @@ class Autocomplete {
     this.valueContainer = container.querySelector( '.autocomplete__value' );
     this.valueElement = container.querySelector( '.autocomplete__text-content' );
 
-    // this.registerEvents();
+    this.registerEvents();
   }
 
   registerEvents() {
