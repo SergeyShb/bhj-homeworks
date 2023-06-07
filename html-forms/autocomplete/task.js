@@ -7,7 +7,7 @@ class Autocomplete {
     this.valueContainer = container.querySelector( '.autocomplete__value' );
     this.valueElement = container.querySelector( '.autocomplete__text-content' );
 
-    this.registerEvents();
+    // this.registerEvents();
   }
 
   registerEvents() {
@@ -68,6 +68,27 @@ class Autocomplete {
   }
 
   getMatches( text ) {
+    this.input.querySelectorAll("option");
+
+    let arr = [];
+
+    for (let i = 0; i < this.input.querySelectorAll("option").length; i++) {
+    
+      if ( this.input.querySelectorAll("option")[i].textContent.toLowerCase().includes(text.toLowerCase()) ) {
+
+        arr.push({
+          text: this.input.querySelectorAll("option")[i].textContent,
+          value: this.input.options[i].value
+        });
+ 
+      }
+
+    }
+
+  return arr;
+
+
+
     /*
       TODO: этот метод нужно дописать
       text - фраза, которую вводят в поле поиска
@@ -81,13 +102,8 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
+    
   }
 }
 
-new Autocomplete( document.querySelector( '.autocomplete' ));
+let autocomplete = new  Autocomplete( document.querySelector( '.autocomplete' ));
