@@ -46,7 +46,7 @@ signinBtn.addEventListener("click", (event) => {
         //если в ответе от серевера, в объекте по ключу success будет значение false  
         if (xhr.response.success === false) {
             //выводим сообщение "невырные логин/пароль"
-            alert("невырные логин/пароль");
+            alert("неверные логин/пароль");
         };
         
     };
